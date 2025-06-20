@@ -1,0 +1,44 @@
+<div class="layout">
+  <nav class="navbar">
+    <div class="brand">🏢 eMall Property Management</div>
+    <div class="user-info">
+      <span>👤 Welcome, User</span>
+      <button (click)="logout()">🔓 Logout</button>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <aside class="sidebar">
+      <ul>
+        <li><a routerLink="/dashboard/marketing">📊 Marketing Dashboard</a></li>
+        <li><a routerLink="/dashboard/owner">🏠 Owner Dashboard</a></li>
+        <li><a routerLink="/spaces/manage">🧰 Manage Spaces</a></li>
+        <li><a routerLink="/spaces/register">➕ Register Space</a></li>
+
+        <li class="section-title">📅 Bookings</li>
+        <li><a routerLink="/bookings/calendar">🗓️ Calendar View</a></li>
+        <li><a routerLink="/bookings/new">🆕 New Booking</a></li>
+        <li><a routerLink="/bookings/history">📚 Booking History</a></li>
+
+        <li class="section-title">📈 Reports</li>
+        <li><a routerLink="/reports/revenue">💰 Revenue Report</a></li>
+        <li><a routerLink="/reports/utilization">📊 Utilization Report</a></li>
+
+        <li class="section-title">🚨 Alerts</li>
+        <li><a routerLink="/alerts/vacancy">🏷️ Vacancy Alerts</a></li>
+
+        <li class="section-title">🛠️ Complaints</li>
+        <li><a routerLink="/complaints/new">✍️ New Complaint</a></li>
+        <li><a routerLink="/complaints/history">📝 Complaint History</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 eMall Property Management</p>
+  </footer>
+</div>

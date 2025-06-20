@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Manage Spaces</h2>
+
+  <!-- Add New Space Form -->
+  <form (ngSubmit)="addSpace()" class="space-form">
+    <input type="text" placeholder="Space Name" [(ngModel)]="newSpace.name" name="name" required />
+    <input type="text" placeholder="Space Type" [(ngModel)]="newSpace.type" name="type" required />
+    <input type="number" placeholder="Pricing (₹)" [(ngModel)]="newSpace.price" name="price" required />
+    <button type="submit">Add Space</button>
+  </form>
+
+  <!-- Space List Table -->
+  <table class="space-table" *ngIf="spaces.length > 0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Space Name</th>
+        <th>Type</th>
+        <th>Pricing</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let space of spaces; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ space.name }}</td>
+        <td>{{ space.type }}</td>
+        <td>₹{{ space.price }}</td>
+        <td><button class="remove-btn" (click)="removeSpace(i)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="spaces.length === 0" class="no-data">No spaces added yet.</p>
+</div>

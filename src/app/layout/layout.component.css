@@ -1,0 +1,97 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* NAVBAR - Taller */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  color: white;
+  padding: 1.25rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar .user-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar button {
+  background: #ff4d4d;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* MAIN BODY */
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 240px;
+  background: #f0f4f8;
+  padding: 1rem;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 500;
+  display: block;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.sidebar a:hover {
+  background-color: #dbe9f4;
+}
+
+.section-title {
+  margin-top: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ccc;
+}
+
+/* MAIN CONTENT */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: #f9fcff;
+}
+
+/* FOOTER - Smaller */
+.footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
