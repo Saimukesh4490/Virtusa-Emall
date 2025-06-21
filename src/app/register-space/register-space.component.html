@@ -1,0 +1,21 @@
+<div class="register-space-container">
+  <h2>Register New Business Space</h2>
+  <form (ngSubmit)="registerSpace()">
+    <label for="name">Space Name</label>
+    <input type="text" id="name" [(ngModel)]="space.name" name="name" required>
+
+    <label for="type">Space Type</label>
+    <select id="type" [(ngModel)]="space.type" name="type" required>
+      <option value="">-- Select Type --</option>
+      <option *ngFor="let t of types" [value]="t">{{ t }}</option>
+    </select>
+
+    <label for="size">Size (e.g., 200 SqFt)</label>
+    <input type="text" id="size" [(ngModel)]="space.size" name="size" required>
+
+    <label for="rate">Rate Per Unit (₹)</label>
+    <input type="number" id="rate" [(ngModel)]="space.rate" name="rate" required>
+
+    <button type="submit">Register Space</button>
+  </form>
+</div>

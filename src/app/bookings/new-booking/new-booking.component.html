@@ -1,0 +1,20 @@
+<div class="booking-form-container">
+  <h2>🆕 New Booking</h2>
+
+  <form (ngSubmit)="book()">
+    <label for="space">Business Space</label>
+    <select [(ngModel)]="booking.space" name="space" id="space" required>
+      <option value="" disabled selected>Select space</option>
+      <option *ngFor="let s of spaces" [value]="s">{{ s }}</option>
+    </select>
+
+    <label for="date">Booking Date</label>
+    <input type="date" [(ngModel)]="booking.date" name="date" id="date" required />
+
+    <button type="submit">📅 Confirm Booking</button>
+  </form>
+
+  <div class="success" *ngIf="submitted">
+    ✅ Your booking has been submitted successfully.
+  </div>
+</div>

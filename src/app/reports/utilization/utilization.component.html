@@ -1,0 +1,9 @@
+<div class="report-container">
+  <h2>📊 Utilization Report</h2>
+  <div *ngFor="let u of usageData" class="util-row">
+    <div class="label">{{ u.space }}</div>
+    <div class="bar-container">
+      <div class="bar-fill" [style.width.%]="u.utilization">{{ u.utilization }}%</div>
+    </div>
+  </div>
+</div>

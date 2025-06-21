@@ -1,0 +1,11 @@
+<div class="calendar-wrapper">
+  <h2>📆 Monthly Calendar</h2>
+
+  <div class="calendar-grid">
+    <div *ngFor="let day of daysInMonth" class="day-box" [ngClass]="{ 'booked': day.booked, 'available': !day.booked }">
+      <strong>{{ day.date }}</strong>
+      <div *ngIf="day.booked">❌ {{ day.space || 'Booked' }}</div>
+      <div *ngIf="!day.booked">✅ Available</div>
+    </div>
+  </div>
+</div>

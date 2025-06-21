@@ -1,0 +1,46 @@
+.history-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #f4f9ff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #2a3f7c;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f9ff;
+}
+
+.empty-msg {
+  margin-top: 1rem;
+  text-align: center;
+  color: #888;
+}

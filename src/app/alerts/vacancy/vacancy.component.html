@@ -1,0 +1,21 @@
+<div class="vacancy-container">
+  <h2>🏷️ Vacancy Alerts</h2>
+  <p class="subtitle">Upcoming vacant spaces ready to be booked</p>
+
+  <table class="vacancy-table">
+    <thead>
+      <tr>
+        <th>Business Space</th>
+        <th>Available From</th>
+        <th>Vacancy Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vacancy of vacancies">
+        <td>{{ vacancy.space }}</td>
+        <td>{{ vacancy.availableFrom }}</td>
+        <td>{{ vacancy.duration }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

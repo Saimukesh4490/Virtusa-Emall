@@ -1,0 +1,50 @@
+.register-space-container {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f8fc;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #2a3f7c;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  color: #333;
+}
+
+input, select {
+  padding: 0.6rem;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 0.3rem;
+}
+
+button {
+  margin-top: 2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

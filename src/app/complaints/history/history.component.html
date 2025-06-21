@@ -1,0 +1,26 @@
+<div class="history-container">
+  <h2>📝 Complaint History</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let complaint of complaints">
+        <td>{{ complaint.id }}</td>
+        <td>{{ complaint.category }}</td>
+        <td>{{ complaint.description }}</td>
+        <td>{{ complaint.date }}</td>
+        <td>
+          <span [ngClass]="complaint.status.toLowerCase()">{{ complaint.status }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

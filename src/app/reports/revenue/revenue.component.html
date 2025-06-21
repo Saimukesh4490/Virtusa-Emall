@@ -1,0 +1,25 @@
+<div class="report-container">
+  <h2>💰 Revenue Report</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Space</th>
+        <th>Month</th>
+        <th>Amount (₹)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of revenues">
+        <td>{{ r.space }}</td>
+        <td>{{ r.month }}</td>
+        <td>₹{{ r.amount | number }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"><strong>Total</strong></td>
+        <td><strong>₹{{ totalRevenue() | number }}</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

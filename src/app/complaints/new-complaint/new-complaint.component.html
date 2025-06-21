@@ -1,0 +1,19 @@
+<div class="complaint-form">
+  <h2>📝 Register New Complaint</h2>
+  <form (ngSubmit)="submitComplaint()">
+    <label for="type">Complaint Type</label>
+    <select id="type" [(ngModel)]="complaint.type" name="type" required>
+      <option value="">-- Select --</option>
+      <option value="Electrical">🔌 Electrical</option>
+      <option value="Plumbing">🚰 Plumbing</option>
+      <option value="Security">🔒 Security</option>
+      <option value="Carpentry">🪚 Carpentry</option>
+      <option value="Other">📦 Other</option>
+    </select>
+
+    <label for="description">Description</label>
+    <textarea id="description" [(ngModel)]="complaint.description" name="description" rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
