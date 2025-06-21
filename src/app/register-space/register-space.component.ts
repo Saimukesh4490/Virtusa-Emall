@@ -1,32 +1,31 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { SpaceService, Space } from 'src/app/services/space.service';
 
 @Component({
   selector: 'app-register-space',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
   templateUrl: './register-space.component.html',
-  styleUrls: ['./register-space.component.css']
+  styleUrls: ['./register-space.component.css'] // ✅ add this line
 })
-export class RegisterSpaceComponent {
-  space = {
-    name: '',
-    type: '',
-    size: '',
-    rate: null
-  };
+export class RegisterSpaceComponent implements OnInit {
+  spaces: Space[] = [];
 
-  types = ['Shop - Small', 'Shop - Medium', 'Shop - Large', 'Atrium', 'Cinema Theater', 'Banner Area'];
+  constructor(private spaceService: SpaceService) {}
 
-  registerSpace() {
-    if (!this.space.name || !this.space.type || !this.space.size || this.space.rate === null) {
-      alert('Please fill all the fields!');
-      return;
-    }
+  ngOnInit(): void {
+    this.spaceService.getSpaces().subscribe(data => {
+      this.spaces = data;
+      console.log('Spaces loaded:', data);
+    });
+  }
 
-    console.log('New Space Registered:', this.space);
-    alert('Space Registered Successfully!');
-    this.space = { name: '', type: '', size: '', rate: null };
+  addSpace() {
+    const newSpace: Space = {
+      name: 'New Shop',
+      location: 'Mall A',
+      price: 7000
+    };
+    this.spaceService.addSpace(newSpace).subscribe(data => {
+      console.log('Added Space:', data);
+    });
   }
 }
